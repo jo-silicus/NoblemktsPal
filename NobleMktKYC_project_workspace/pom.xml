@@ -12,30 +12,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
-
 		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-			<id>central</id>
-			<name>libs-release</name>
-			<url>https://artifactory.noblemarkets.net/artifactory/libs-release</url>
-			<layout>default</layout>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/libs-milestone/</url>
 		</repository>
-
-		<repository>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<id>libs-snapshot</id>
-			<name>libs-snapshot</name>
-			<url>https://artifactory.noblemarkets.net/artifactory/libs-snapshot</url>
-		</repository>
-
 	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -54,11 +35,14 @@
 			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.3</version>
-			<scope>provided</scope>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.10</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+
+
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -66,6 +50,16 @@
 			<version>1.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test-mvc</artifactId>
+			<version>1.0.0.M1</version>
+		</dependency>
 		<!-- file upload -->
 		<!-- http://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
 		<dependency>
@@ -147,7 +141,6 @@
 			<artifactId>box-java-sdk</artifactId>
 			<version>2.1.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.noblemarkets.api</groupId>
 			<artifactId>box-client</artifactId>
@@ -164,13 +157,82 @@
 			<artifactId>unify</artifactId>
 			<version>0.6-SNAPSHOT</version>
 		</dependency>
-		
+		<!-- display logger in color -->
+		<dependency>
+			<groupId>com.jcabi</groupId>
+			<artifactId>jcabi-log</artifactId>
+			<version>0.15</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.4.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-mock</artifactId>
+			<version>2.0.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>1.2.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path-assert</artifactId>
+			<version>1.2.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 			<version>1.4.0.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+
 	</dependencies>
 
 
