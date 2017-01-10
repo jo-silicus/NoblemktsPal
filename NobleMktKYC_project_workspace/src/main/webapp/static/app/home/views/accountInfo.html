@@ -1,0 +1,526 @@
+<div id="Account">
+	<div data-ng-controller="accountController">
+		<data-ng-form name="addEditAccountInfo" novalidate>
+		<div class="col-md-9 col-lg-9 col-sm-12">
+			<div id="tmm-form-wizard">
+				<div class="stage-container">
+					<div class="row">
+						<div class="stage tmm-success col-md-4 col-sm-4 col-xs-4">
+							<div class="stage-header head-icon head-icon-lock">
+								<img src="images/personal.png" alt="" />
+							</div>
+							<div class="stage-content">
+								<h3 class="stage-title">Personal Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+
+						<div class="stage tmm-success col-md-4 col-sm-4 col-xs-4">
+							<div class="stage-header head-icon head-icon-user">
+								<img src="images/entity.png" alt="" />
+							</div>
+
+							<div class="stage-content">
+								<h3 class="stage-title">Entity Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+
+						<div class="stage tmm-current col-md-4 col-sm-4 col-xs-4 last">
+							<div class="stage-header head-icon head-icon-payment">
+								<img src="images/lock.png" alt="" />
+							</div>
+							<div class="stage-content">
+								<h3 class="stage-title">Account Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+					</div>
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+			<div class="relative">
+				<h3 class="heading">Bank Account Information</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group">
+										<label>Account Purpose</label> <select class="form-control"
+											data-ng-model="accountInfoModel.account_type"
+											id="accountType">
+											<option value="">-Select-</option>
+											<option>Trading</option>
+											<option>Bank</option>
+											<option>Call</option>
+											<option>Margin</option>
+											<option>Clearing</option>
+											<option>Custody</option>
+											<option>Wallet</option>
+											<option>Asset</option>
+											<option>Liability</option>
+											<option>Income</option>
+											<option>Expense</option>
+											<option>Capital</option>
+											<option>Suspense</option>
+											<option>Broker</option>
+											<option>Correspondent</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.accountName.$invalid && addEditAccountInfo.$submitted}">
+										<label>Name on Account<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="accountInfoModel.accountName"
+											name="accountName" required id="accountName">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group">
+										<label>Account No.</label> <input type="text"
+											class="form-control"
+											data-ng-model="accountInfoModel.account_no" id="accountNo">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.paymentType.$invalid && addEditAccountInfo.$submitted}">
+										<label>Payment Code Type<span class="error">*</span></label> <select
+											class="form-control"
+											data-ng-model="accountInfoModel.payment_code_one_id" required
+											data-ng-change="checkSelectedPaymentType(accountInfoModel.payment_code_one_id,1)"
+											name="paymentType" id="paymentType">
+											<option value="">-Select-</option>
+											<option>Routing/ABA No</option>
+											<option>IBAN</option>
+											<option>Swift</option>
+											<option>BSB Code</option>
+											<option>Phone No</option>
+											<option>Branch Code</option>
+											<option>Bank Transit No</option>
+											<option>IFSC Code</option>
+											<option>Sort Code</option>
+											<option>CLABE</option>
+											<option>BIC Code</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12"
+									data-ng-if="isAutoComplete">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : bankNotFound && !isBankNameSelected || (addEditAccountInfo.bankCode.$invalid && addEditAccountInfo.$submitted)}">
+										<label> Code<span class="error">*</span><span
+											id="bankNameError" class="has-error"
+											data-ng-show="bankNotFound && !isBankNameSelected">
+												Routing number not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="accountInfoModel.payment_code_one_ref"
+												mass-autocomplete-item="autocomplete_accountBankNames"
+												required name="bankCode" id="bankCode">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12"
+									data-ng-if="!isAutoComplete">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.bankCode.$invalid && addEditAccountInfo.$submitted}">
+										<label> Code<span class="error">*</span>
+										</label> <input type="text" class="form-control"
+											data-ng-model="accountInfoModel.payment_code_one_ref"
+											required name="bankCode" id="bankCode">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.bank.$invalid && addEditAccountInfo.$submitted}">
+										<label>Bank<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="accountInfoModel.bank"
+											data-ng-disabled="isAutoComplete" required name="bank"
+											id="bank">
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="relative">
+				<h3 class="heading">Bank Account Address</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-12">
+
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.address1.$invalid && addEditAccountInfo.$submitted}">
+										<label>Address 1<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="accountInfoModel.account_information.addrLine1"
+											name="address1" required id="address1">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group">
+										<label>Address 2</label> <input type="text"
+											class="form-control"
+											data-ng-model="accountInfoModel.account_information.addrLine2"
+											id="address2">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : countryNotFound && !isCountrySelected}">
+										<label> Account's Country<span id="countryError"
+											class="has-error"
+											data-ng-show="countryNotFound && !isCountrySelected">
+												Country not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="accountInfoModel.accCountryName"
+												mass-autocomplete-item="autocomplete_countries"
+												name="accountsCountry" id="accountsCountry">
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : stateNotFound && !isStateSelected}">
+										<label> State/Province <span id="stateError"
+											class="has-error"
+											data-ng-show="stateNotFound && !isStateSelected">
+												State not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="accountInfoModel.account_information.addrState"
+												mass-autocomplete-item="autocomplete_states"
+												name="addrState" id="addrState">
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col-md-4 col-lg-4 col-sm-12">
+
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.city.$invalid && addEditAccountInfo.$submitted}">
+										<label>City<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="accountInfoModel.account_information.addrCity"
+											name="city" required id="city">
+									</div>
+
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditAccountInfo.zip.$invalid && addEditAccountInfo.$submitted}">
+										<label>ZIP/Postcode<span class="error">*</span></label> <input
+											type="text" class="form-control" name="zip" required
+											data-ng-model="accountInfoModel.account_information.addrPostCode"
+											numbers-only id="zip">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="relative">
+				<h3 class="heading">
+					Correspondent Bank Account Details <span class="subtextItalics">
+						(if applicable) </span>
+				</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="col-md-4 col-lg-4 col-sm-12">
+							<div class="form-group"
+								data-ng-class="{ 'has-error' : addEditAccountInfo.corrPaymentType.$invalid && addEditAccountInfo.$submitted}">
+								<label>Payment Code Type<span class="error">*</span></label> <select
+									class="form-control"
+									data-ng-disabled="isCorrPaymentTypeSelected"
+									data-ng-model="corr_payment_code_one_id" required
+									data-ng-change="checkSelectedPaymentType(corr_payment_code_one_id,2)"
+									name="corrPaymentType" id="corrPaymentType">
+									<option value="">-Select-</option>
+									<option>Routing/ABA No</option>
+									<option>IBAN</option>
+									<option>Swift</option>
+									<option>BSB Code</option>
+									<option>Phone No</option>
+									<option>Branch Code</option>
+									<option>Bank Transit No</option>
+									<option>IFSC Code</option>
+									<option>Sort Code</option>
+									<option>CLABE</option>
+									<option>BIC Code</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-4 col-sm-12"
+							data-ng-if="isCorrAutoComplete">
+							<div class="form-group"
+								data-ng-class="{ 'has-error' : corrBankNotFound && !isCorrBankNameSelected || (addEditAccountInfo.corrBankCode.$invalid && addEditAccountInfo.$submitted)}">
+								<label> Code<span class="error">*</span><span
+									id="bankNameError" class="has-error"
+									data-ng-show="corrBankNotFound && !isCorrBankNameSelected">
+										Routing number not found! </span>
+								</label>
+								<div mass-autocomplete>
+									<input type="text" class="form-control"
+										data-ng-model="accountInfoModel.corrRoutingNo"
+										mass-autocomplete-item="autocomplete_corrBankNames" required
+										name="corrBankCode" id="corrBankCode">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-4 col-sm-12"
+							data-ng-if="!isCorrAutoComplete">
+							<div class="form-group"
+								data-ng-class="{ 'has-error' : addEditAccountInfo.corrBankCode.$invalid && addEditAccountInfo.$submitted}">
+								<label> Code<span class="error">*</span>
+								</label> <input type="text" class="form-control"
+									data-ng-model="accountInfoModel.corrRoutingNo" required
+									name="corrBankCode" id="corrBankCode">
+							</div>
+						</div>
+
+						<div class="col-md-4 col-lg-4 col-sm-12">
+							<div class="form-group"
+								data-ng-class="{ 'has-error' : addEditAccountInfo.corrBank.$invalid && addEditAccountInfo.$submitted}">
+								<label>Bank Name<span class="error">*</span>
+								</label> <input type="text" class="form-control"
+									data-ng-model="accountInfoModel.corrbankName"
+									data-ng-disabled="isCorrAutoComplete" required name="corrBank"
+									id="corrBank">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12">
+										<div class="col-md-4 col-lg-4 col-sm-12">
+
+											<div class="form-group">
+												<label>Address 1</label> <input type="text"
+													class="form-control"
+													data-ng-model="accountInfoModel.corraddress1"
+													id="corraddress1">
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-12">
+											<div class="form-group">
+												<label>Address 2</label> <input type="text"
+													class="form-control"
+													data-ng-model="accountInfoModel.corraddress2"
+													id="corraddress2">
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-12">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : corrCountryNotFound && !isCorrCountrySelected || (addEditAccountInfo.corrAccountsCountry.$invalid && addEditAccountInfo.$submitted)}">
+												<label> Account's Country<span id="corrCountryError"
+													class="has-error"
+													data-ng-show="corrCountryNotFound && !isCorrCountrySelected">
+														Country not found! </span>
+
+												</label>
+												<div mass-autocomplete>
+													<input type="text" class="form-control"
+														data-ng-model="accountInfoModel.corrAccCountryName"
+														mass-autocomplete-item="autocomplete_correspondenceCountries"
+														name="corrAccountsCountry" id="corrAccountsCountry">
+
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12">
+										<div class="col-md-4 col-lg-4 col-sm-12">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : corrStateNotFound && !isCorrStateSelected}">
+												<label> State/Province <span id="corrStateError"
+													class="has-error"
+													data-ng-show="corrStateNotFound && !isCorrStateSelected">
+														State not found! </span>
+												</label>
+												<div mass-autocomplete>
+													<input type="text" class="form-control"
+														data-ng-model="accountInfoModel.corrstate"
+														mass-autocomplete-item="autocomplete_correspondenceStates"
+														name="corrstate" id="corrstate">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-12">
+											<div class="form-group">
+												<label>City</label> <input type="text" class="form-control"
+													data-ng-model="accountInfoModel.corrcity" id="corrcity">
+											</div>
+
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-12">
+											<div class="form-group">
+												<label>ZIP/Postcode</label> <input type="text"
+													class="form-control"
+													data-ng-model="accountInfoModel.corrzip" numbers-only
+													id="corrzip">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="relative">
+				<h3 class="heading">Wallet Account Address</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-12">
+									<div class="form-group">
+										<label>Name on Account</label> <input type="text"
+											class="form-control"
+											data-ng-model="accountInfoModel.walletAccountName"
+											id="walletAccountName">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-12">
+
+									<div class="form-group">
+										<label>Wallet Address </label> <input type="text"
+											class="form-control"
+											data-ng-model="accountInfoModel.walletAddress"
+											id="walletAddress">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-right paddingtb15">
+				<button class="btn btn-default marginr25 btn-save" type="button"
+					data-ng-click="resetAccountInfo()" id="btnReset">Reset</button>
+				<button class="btn btn-reset a-prev marginr25"
+					data-ng-click="accountPrev()" id="btnPrev">Previous</button>
+				<button class="btn btn-save" data-ng-click="saveAccountInfo()"
+					id="btnSave">Save</button>
+				<button class="btn btn-save" data-ng-click="submit()"
+					data-ng-disabled="!accountSave" id="btnSubmit"
+					data-toggle="tooltip" data-placement="top"
+					title="{{!accountSave?'Please save to submit the form':''}}"
+					tooltip>Submit</button>
+			</div>
+			<div data-ng-include src="'app/home/views/thankyouPage.html'"
+				class="full-width"></div>
+
+
+		</div>
+
+		<div class="col-md-3 col-lg-3 col-sm-12 ">
+			<div class="right-pannel">
+				<div class="row">
+					<div class="col-md-12 col-sm-8">
+						<h2 class="right-pannel-heading-top">What We Need</h2>
+						<div class="content">
+							<p>This is the next step in the KYC (Know Your Customer)
+								process. So Noble can set up a trading account in your name we
+								need to be able have proof of who you are. The following
+								documents are acceptable, and you can submit on primary ID
+								(Passport) or two secondary ID's (Driver's ID, any Government
+								Issued ID, or Work ID with Photo).</p>
+							<span class="bold">ALL DOCUMENTS MUST SHOW THE ADDRESS</span> <span>
+								when it is present the document </span>
+							<ul>
+								<li>Valid Passport</li>
+								<li>Valid Driver's ID / Government Issued ID / Work ID with
+									Photo</li>
+								<li>Evidence of company physical address such as utility
+									bill or lease agreement</li>
+								<li>Evidence of Source of Funds such as bank statements or
+									financial statements</li>
+							</ul>
+							<p class="bold">Only PDF, JPEG or PNG files can be uploaded</p>
+
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-4">
+						<h2 class="right-pannel-heading-top">Next Steps</h2>
+						<div class="content">
+							<p>Once we have received all your information, we will
+								contact you to let you know the KYC process has been completed.
+								We will then send you.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modalConfirmSubmit" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 id="lblTitleConfirmYesNo" class="modal-title">Confirmation</h4>
+					</div>
+					<div class="modal-body">
+						<p id="lblMsgConfirmYesNo">Are you sure you want to submit the
+							information?</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btYes" type="button" class="btn btn-primary">
+							Yes</button>
+						<button id="btNo" type="button" class="btn btn-default">
+							No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</data-ng-form>
+	</div>
+</div>

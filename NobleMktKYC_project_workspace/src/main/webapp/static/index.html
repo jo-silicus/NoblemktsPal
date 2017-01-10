@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Noble Markets</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="css/bootstrap-datepicker.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link href="css/massautocomplete.theme.css" rel="stylesheet" />
+<link href="css/toastr.css" rel="stylesheet" />
+</head>
+<body>
+	<form data-ng-view="" novalidate class="login-control"></form>
+	<footer>
+		<img src="images/footer-logo.png" class="inline logo" alt=""> <span
+			class="pull-right copyright">Copyright 2016. All Rights
+			Reserved</span>
+	</footer>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-sanitize.js"></script>
+	<script src="libs/angular-local-storage.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="libs/moment.js"></script>
+	<script src="libs/bootstrap-datetimepicker.min.js"></script>
+	<script src="libs/toastr.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/login/LoginController.js"></script>
+	<script src="app/home/controllers/personalController.js"></script>
+	<script src="app/home/controllers/entityController.js"></script>
+	<script src="app/home/controllers/accountController.js"></script>
+	<script src="app/home/homeService.js"></script>
+	<script src="app/shared/loaderService.js"></script>
+	<script src="app/shared/factory/factory.js"></script>
+	<script src="app/shared/directives/emailValidate.directive.js"></script>
+	<script src="app/shared/directives/alphabets.directive.js"></script>
+	<script src="app/shared/directives/numbersOnly.directive.js"></script>
+	<script src="app/shared/directives/alphaNumeric.directive.js"></script>
+	<script src="app/shared/directives/rawAjaxBusyIndicator.js"></script>
+	<script src="app/shared/directives/tooltip.directive.js"></script>
+	<script src="app/shared/shared.constant.js"></script>
+	<script src="libs/custom.js"></script>
+	<script src="libs/massautocomplete.js"></script>
+	<div data-ng-controller="loginController">
+		<div id="loaderDiv" raw-ajax-busy-indicator="">
+			<img src="images/ajax-loader.gif" class="ajax-loader loader-size" />
+		</div>
+	</div>
+</body>
+</html>

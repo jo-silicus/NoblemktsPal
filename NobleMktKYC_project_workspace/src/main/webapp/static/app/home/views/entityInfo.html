@@ -1,0 +1,533 @@
+<div id="Entity" class="">
+	<div data-ng-controller="entityController">
+		<data-ng-form name="addEditEntityInfo" novalidate>
+
+		<div class="col-md-9 col-lg-9 col-sm-12">
+			<div id="tmm-form-wizard">
+				<div class="stage-container">
+					<div class="row">
+						<div class="stage tmm-success col-md-4 col-sm-4 col-xs-4">
+							<div class="stage-header head-icon head-icon-lock">
+								<img src="images/personal.png" alt="" />
+							</div>
+							<div class="stage-content">
+								<h3 class="stage-title">Personal Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+
+						<div class="stage tmm-current col-md-4 col-sm-4 col-xs-4">
+							<div class="stage-header head-icon head-icon-user">
+								<img src="images/entity.png" alt="" />
+							</div>
+
+							<div class="stage-content">
+								<h3 class="stage-title">Entity Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+
+						<div class="stage col-md-4 col-sm-4 col-xs-4 last">
+							<div class="stage-header head-icon head-icon-payment">
+								<img src="images/lock.png" alt="" />
+							</div>
+							<div class="stage-content">
+								<h3 class="stage-title">Account Information</h3>
+
+							</div>
+						</div>
+						<!--/ .stage-->
+					</div>
+				</div>
+				<div id="sticky-anchor2"></div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="relative">
+				<h3 class="heading">Entity Details</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.companyName.$invalid && addEditEntityInfo.$submitted}">
+										<label>Company Name<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.name" name="companyName"
+											alpha-numeric required id="companyName">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.employerId.$invalid && addEditEntityInfo.$submitted}">
+										<label>Employer ID Number<span class="error">*</span></label>
+										<input type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_information.employer_Identification_Number"
+											name="employerId" required id="employerId">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.baseCurrency.$invalid && addEditEntityInfo.$submitted}">
+										<label>Base Currency<span class="error">*</span></label> <select
+											class="form-control"
+											data-ng-options="currency.code as currency.code for currency in listData.currencyList"
+											data-ng-model="entityInfoModel.base_currency" required
+											name="baseCurrency" id="baseCurrency">
+											<option value="">-Select-</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.typeOfBusiness.$invalid && addEditEntityInfo.$submitted}">
+										<label>Type of Business<span class="error">*</span></label> <select
+											class="form-control"
+											data-ng-model="entityInfoModel.typeOfBusiness"
+											name="typeOfBusiness" required id="typeOfBusiness">
+											<option value="">-Select-</option>
+											<option>Hedge Fund</option>
+											<option>Broker Dealer</option>
+											<option>Exchange</option>
+											<option>Payment Processor</option>
+											<option>Other</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.sourceOfFunds.$invalid && addEditEntityInfo.$submitted}">
+										<label>Source of Funds<span class="error">*</span></label>
+										<textarea class="full-width form-control" rows="5"
+											data-ng-model="entityInfoModel.entity_information.source_of_Funds"
+											name="sourceOfFunds" required id="sourceOfFunds"></textarea>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="relative">
+				<h3 class="heading">Contact Details</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+
+				<div class="panel show">
+					<div class="box-theme">
+						<h3 class="subtext">Headquarter Address</h3>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.hqAddress.$invalid && addEditEntityInfo.$submitted}">
+										<label>Address<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_information.registered_Address"
+											name="hqAddress" required id="hqAddress">
+									</div>
+								</div>
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : countryNotFound && !isCountrySelected
+                                         ||(addEditEntityInfo.hqCountry.$invalid && addEditEntityInfo.$submitted)}">
+										<label> Country<span class="error">*</span> <span
+											id="CountryError" class="has-error"
+											data-ng-show="countryNotFound && !isCountrySelected">
+												Country not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="entityInfoModel.hqCountryName"
+												mass-autocomplete-item="autocomplete_countries"
+												name="hqCountry" id="hqCountry" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : stateNotFound && !isStateSelected}">
+										<label> State <span id="stateError" class="has-error"
+											data-ng-show="stateNotFound && !isStateSelected">
+												State not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="entityInfoModel.entity_information.registered_State"
+												mass-autocomplete-item="autocomplete_states"
+												name="registeredState" id="registeredState">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.hqCity.$invalid && addEditEntityInfo.$submitted}">
+										<label>City<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_information.registered_City"
+											name="hqCity" required id="hqCity">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.hqZip.$invalid && addEditEntityInfo.$submitted}">
+										<label>ZIP/Postcode<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_information.registered_Postcode"
+											name="hqZip" required numbers-only id="hqZip">
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="subtext">Mailing Address</h3>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-12 col-lg-12 col-sm-12 lbl-duplicate">
+									<input type="checkbox" ng-change="setData(sameasAbove)"
+										data-ng-model="sameasAbove" id="sameasAbove"> Same as
+									above
+								</div>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group">
+										<label>Mailing Address</label> <input type="text"
+											class="form-control"
+											data-ng-model="entityInfoModel.entity_address.postal_Address"
+											id="postalAddress">
+									</div>
+								</div>
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : mailingCountryNotFound && !isMailingCountrySelected}">
+										<label> Country <span id="mailingCountryError"
+											class="has-error"
+											data-ng-show="mailingCountryNotFound && !isMailingCountrySelected">
+												Country not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="entityInfoModel.mailingCountryName"
+												mass-autocomplete-item="autocomplete_mailingCountries"
+												name="country" id="country">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : mailingStateNotFound && !isMailingStateSelected}">
+										<label> State <span id="mailingStateError"
+											class="has-error"
+											data-ng-show="mailingStateNotFound && !isMailingStateSelected">
+												State not found! </span>
+										</label>
+										<div mass-autocomplete>
+											<input type="text" class="form-control"
+												data-ng-model="entityInfoModel.entity_address.state"
+												mass-autocomplete-item="autocomplete_mailingStates"
+												name="state" id="state">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group">
+										<label>City</label> <input type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_address.city"
+											id="entityAddressCity">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group">
+										<label>ZIP/Postcode</label> <input type="text"
+											class="form-control"
+											data-ng-model="entityInfoModel.entity_address.postcode"
+											numbers-only id="postcode">
+									</div>
+								</div>
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.phone.$invalid && addEditEntityInfo.$submitted}">
+										<label>Phone<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_address.phone"
+											name="phone" required numbers-only id="phone">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{'has-error' : addEditEntityInfo.alternatePhone.$invalid && addEditEntityInfo.$submitted}">
+										<label>Alternate Phone<span class="error">*</span></label> <input
+											type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_address.alt_Phone"
+											name="alternatePhone" required numbers-only
+											id="alternatePhone">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditEntityInfo.reportsEmail.$invalid }">
+										<label> Reports Email<span class="has-error"
+											data-ng-show="addEditEntityInfo.reportsEmail.$invalid">
+												Please enter valid email id </span>
+										</label> <input type="text" class="form-control" name="reportsEmail"
+											data-ng-model="entityInfoModel.entity_address.reports_Email"
+											data-ng-blur="validateReportsEmail(entityInfoModel.entity_address.reports_Email)"
+											id="reportsEmail"> <span class="note">Eg.test1@gmail.com
+											, test2@gmail.com</span>
+									</div>
+								</div>
+
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group">
+										<label>Trademark Name</label> <input type="text"
+											class="form-control"
+											data-ng-model="entityInfoModel.entity_information.trademark_Name"
+											name="trademarkName" id="trademarkName">
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : addEditEntityInfo.transferCallbackPhone.$invalid && addEditEntityInfo.$submitted}">
+										<label>Transfer Call Back Phone<span class="error">*</span></label>
+										<input type="text" class="form-control"
+											data-ng-model="entityInfoModel.entity_information.transfer_Call_back_Phone"
+											name="transferCallbackPhone" required numbers-only
+											id="transferCallbackPhone">
+									</div>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4">
+									<div class="form-group"
+										data-ng-class="{ 'has-error' : (addEditEntityInfo.callbackEmail.$invalid && addEditEntityInfo.$submitted) || invalidCallbackEmail }">
+										<label> Transfer Call Back Email<span class="error">*</span><span
+											class="has-error"
+											data-ng-show="addEditEntityInfo.callbackEmail.$invalid
+                                                                              && !addEditEntityInfo.callbackEmail.$error.required">
+												Please enter valid email id </span>
+										</label> <input type="text" class="form-control" name="callbackEmail"
+											data-ng-model="entityInfoModel.entity_information.transfer_Call_back_Email"
+											required
+											data-ng-blur="emailValidate(entityInfoModel.entity_information.transfer_Call_back_Email,'callbackEmail')"
+											id="callbackEmail">
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="relative">
+				<h3 class="heading">Document Upload</h3>
+				<i class="pull-right accordion active btn-collapse"></i>
+				<div class="panel show">
+					<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12">
+								<div class="col-md-6 col-lg-6 col-sm-6">
+									<div class="row">
+										<div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : entityDocUpload}">
+												<label>Entity Document Upload<span class="error">*</span></label>
+												<select class="form-control" name="entityDocUpload"
+													data-ng-model="entityInfoModel.entityDocUpload"
+													id="entityDocUpload">
+													<option value="">-Select-</option>
+													<option>Ownership Entity Legal Doc</option>
+													<option>Evidence of Source of Funds</option>
+													<option>W 9 Forms</option>
+													<option>Company Tax Return</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+											<div class="form-group margint16">
+												<span class="btn btn-upload btn-file"
+													data-ng-model="entityInfoModel.file"> Upload <input
+													type="file" data-ng-model="entityInfoModel.file"
+													ng-click="validateEntityForm($event)"
+													onchange="angular.element(this).scope().selectEntityFile(this.files)"
+													id="entityFile">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-6 col-sm-6">
+									<div class="row">
+										<div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : entityEDDUpload}">
+												<label>Enhanced Due Diligence (EDD) Documents</label> <select
+													class="form-control" name="enhancedDueDiligence"
+													data-ng-model="entityInfoModel.enhancedDueDiligence"
+													id="enhancedDueDiligence">
+													<option value="">-Select-</option>
+													<option>AML Questionnaire</option>
+													<option>State MSB License or FinCen registration</option>
+													<option>AML Program and Procedures</option>
+													<option>Last independent audit report</option>
+													<option>Business visit report</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+											<div class="form-group margint16 lbl-space">
+												<span class="btn btn-upload btn-file"> Upload <input
+													type="file" data-ng-model="entityInfoModel.eddFile"
+													ng-click="validateEntityEDDForm($event)"
+													onchange="angular.element(this).scope().selectEntityEDDFile(this.files)"
+													id="eddFile">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row new-tble">
+
+							<div class="col-md-6 col-lg-6 col-sm-6">
+								<div class="doc-tble two-grid col-md-12"
+									data-ng-show="isEntityFileSelected">
+									<h3 class="heading">Uploaded Entity Documents</h3>
+
+									<table class="table table-responsive">
+										<thead>
+											<tr>
+												<th>Document Type</th>
+												<th>Document Name</th>
+											</tr>
+										</thead>
+										<tbody ng-repeat="doc in docEntityArray">
+											<tr>
+												<td>{{doc.documentType}}</td>
+												<td>{{doc.originalName}}</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6 col-sm-6 ">
+								<div class="doc-tble two-grid col-md-12"
+									data-ng-show="isEDDFileSelected">
+									<h3 class="heading">Uploaded EDD Documents</h3>
+									<table class="table table-responsive">
+										<thead>
+											<tr>
+												<th>Document Type</th>
+												<th>Document Name</th>
+											</tr>
+										</thead>
+										<tbody ng-repeat="doc in docEDDArray">
+											<tr>
+												<td>{{doc.documentType}}</td>
+												<td>{{doc.originalName}}</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-right paddingtb15">
+				<button class="btn btn-default marginr25 btn-save" type="button"
+					data-ng-click="resetEntityInfo()" id="btnReset">Reset</button>
+				<button class="btn btn-reset marginr25 e-prev"
+					data-ng-click="entityPrev()" id="btnPrev">Previous</button>
+				<button class="btn btn-default marginr25 btn-save"
+					data-ng-click="saveEntityInfo()" id="btnSave">Save</button>
+				<button class="btn btn-forgot e-next" data-ng-click="entityNext()"
+					id="btnNext">Next</button>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-lg-3 col-sm-12 ">
+			<div class="right-pannel" id="sticky2">
+				<div class="row">
+					<div class="col-md-12 col-sm-8">
+						<h2 class="right-pannel-heading-top">What We Need</h2>
+						<div class="content">
+							<p>This is the next step in the KYC (Know Your Customer)
+								process. So Noble can set up a trading account in your name we
+								need to be able have proof of who you are. The following
+								documents are acceptable, and you can submit on primary ID
+								(Passport) or two secondary ID's (Driver's ID, any Government
+								Issued ID, or Work ID with Photo).</p>
+							<span class="bold">ALL DOCUMENTS MUST SHOW THE ADDRESS</span><span>
+								when it is present in the document </span>
+							<ul>
+								<li>Valid Passport</li>
+								<li>Valid Driver's ID / Government Issued ID / Work ID with
+									Photo</li>
+								<li>Evidence of company physical address such as utility
+									bill or lease agreement</li>
+								<li>Evidence of Source of Funds such as bank statements or
+									financial statements</li>
+							</ul>
+							<p class="bold">Only PDF, JPEG or PNG files can be uploaded</p>
+
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-4">
+						<h2 class="right-pannel-heading-top">Next Steps</h2>
+						<div class="content">
+							<p>Once we have received all your information, we will
+								contact you to let you know the KYC process has been completed.
+								We will then send you.</p>
+						</div>
+						<div class="content lbl-result">
+							<p>Expected Wire Transfer Monthly Average Activity</p>
+							<label>From</label> <label></label> <label>To</label> <label></label>
+
+							<p>Expected Trading Monthly Average Activity</p>
+							<label>From</label> <label></label> <label>To</label> <label></label>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" name="entityFilePath" value="{{entityFilePath}}" />
+		<input type="hidden" name="eddFilePath" value="{{EDDFilePath}}" /> </data-ng-form>
+	</div>
+</div>

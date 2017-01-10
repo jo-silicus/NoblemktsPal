@@ -1,0 +1,365 @@
+DEBUG: [main] 2016-10-17 13:57:16,666 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 13:57:16,685 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 13:57:16,720 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 13:57:16,722 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 13:57:16,724 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 13:57:16,726 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy38
+DEBUG: [main] 2016-10-17 13:57:16,770 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 13:57:16,775 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 13:57:17,094 com.noblemktkyc.controller.ITKycfetchControllerTest in fetchKycTest
+ERROR: [main] 2016-10-17 13:57:17,109 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:17,109 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:17,109 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:17,111 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:19,685 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:20,102 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,103 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:20,103 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:20,104 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,104 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,458 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,459 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:20,459 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:20,459 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,460 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:20,460 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::createFolder Method
+INFO : [main] 2016-10-17 13:57:21,038 com.noblemktkyc.controller.KycFetchController Inside KycFetchController::fetchKycDetail method::fetching data of kyc user::
+INFO : [main] 2016-10-17 13:57:21,039 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+INFO : [main] 2016-10-17 13:57:21,042 com.noblemktkyc.service.KycFetchServiceImpl Inside KycFetchServiceImpl :: readFileInObject Method
+INFO : [main] 2016-10-17 13:57:21,043 com.noblemktkyc.fileoperation.FileOperationImp Inside FileOperationImp :: readFileInObject Method
+INFO : [main] 2016-10-17 13:57:21,043 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::downloadFolderFromBox Method
+INFO : [main] 2016-10-17 13:57:21,044 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:21,044 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:21,045 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:21,507 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:21,885 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:21,886 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:21,886 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:21,887 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:21,887 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:21,888 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:22,235 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:22,236 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:22,236 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:22,237 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:22,237 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:22,238 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:22,238 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::createFolder Method
+INFO : [main] 2016-10-17 13:57:23,070 com.noblemktkyc.fileoperation.FileOperationImp File path is : D:\NobleMktKYC\KYCDocuments\sushi@gmail.com_inProgress\PersonalInfo_sushi@gmail.com.txt
+INFO : [main] 2016-10-17 13:57:23,071 com.noblemktkyc.fileoperation.FileOperationImp File path is : D:\NobleMktKYC\KYCDocuments\sushi@gmail.com_inProgress\EntityInfo_sushi@gmail.com.txt
+INFO : [main] 2016-10-17 13:57:23,071 com.noblemktkyc.fileoperation.FileOperationImp File path is : D:\NobleMktKYC\KYCDocuments\sushi@gmail.com_inProgress\AccountInfo_sushi@gmail.com.txt
+INFO : [main] 2016-10-17 13:57:23,071 com.noblemktkyc.controller.KycFetchController KycFetchController::fetchKycDetail method::information of user is not present
+INFO : [main] 2016-10-17 13:57:23,161 com.noblemktkyc.controller.ITKycSaveControllerTest in renameFolderTest 
+ERROR: [main] 2016-10-17 13:57:23,164 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:23,165 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:23,165 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:23,165 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:23,610 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:23,989 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:23,990 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:23,990 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:23,990 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:23,991 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:23,991 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:23,991 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:24,399 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:24,400 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:24,400 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:24,401 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:24,421 com.noblemktkyc.controller.KycSaveController inside KycSaveController :: renameFolder Method
+INFO : [main] 2016-10-17 13:57:24,423 com.noblemktkyc.controller.KycSaveController Inside KycSaveServiceImpl :: renameDirectory Method
+INFO : [main] 2016-10-17 13:57:24,423 com.noblemktkyc.fileoperation.FileOperationImp Inside FileOperationImp :: renameDirectory Method
+INFO : [main] 2016-10-17 13:57:24,424 com.noblemktkyc.fileoperation.FileOperationImp Inside FileOperationImp :: renameDirectory Method :: Completed folder already exists hence Cannot be rename
+INFO : [main] 2016-10-17 13:57:24,424 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl :: reNameFolder Method
+INFO : [main] 2016-10-17 13:57:24,424 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:24,424 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:24,425 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:24,986 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:25,472 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:25,473 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:25,474 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:25,474 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:25,475 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:25,475 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:25,475 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:25,898 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:25,898 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:25,899 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:25,899 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+ERROR: [main] 2016-10-17 13:57:26,597 com.noblemktkyc.service.box.api.BoxApiServiceImpl {"type":"error","status":409,"code":"item_name_in_use","context_info":{"conflicts":[{"type":"folder","id":"11572672742","sequence_id":"1","etag":"1","name":"customer_sample_jyoti@gmail.com_complete"}]},"help_url":"http:\/\/developers.box.com\/docs\/#errors","message":"Item with the same name already exists","request_id":"161613684758048b6e6545a"}
+ERROR: [main] 2016-10-17 13:57:26,598 com.noblemktkyc.service.box.api.BoxApiServiceImpl [Ljava.lang.StackTraceElement;@21375169
+ERROR: [main] 2016-10-17 13:57:26,607 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxAPIException in BoxApiServiceImpl::reNameFolder Method :: Exception is ::
+com.box.sdk.BoxAPIException: The API returned an error code: 409
+	at com.box.sdk.BoxAPIResponse.<init>(BoxAPIResponse.java:70)
+	at com.box.sdk.BoxJSONResponse.<init>(BoxJSONResponse.java:30)
+	at com.box.sdk.BoxAPIRequest.trySend(BoxAPIRequest.java:423)
+	at com.box.sdk.BoxAPIRequest.send(BoxAPIRequest.java:209)
+	at com.box.sdk.BoxAPIRequest.send(BoxAPIRequest.java:184)
+	at com.box.sdk.BoxFolder.updateInfo(BoxFolder.java:183)
+	at com.noblemktkyc.service.box.api.BoxApiServiceImpl.reNameFolder(BoxApiServiceImpl.java:283)
+	at com.noblemktkyc.fileoperation.FileOperationImp.renameDirectory(FileOperationImp.java:152)
+	at com.noblemktkyc.service.KycSaveServiceImpl.renameDirectory(KycSaveServiceImpl.java:68)
+	at com.noblemktkyc.controller.KycSaveController.renameFolder(KycSaveController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:111)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:806)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:729)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:760)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:65)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:144)
+	at com.noblemktkyc.controller.ITKycSaveControllerTest.renameFolderTest(ITKycSaveControllerTest.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:82)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:73)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:217)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+INFO : [main] 2016-10-17 13:57:26,619 com.noblemktkyc.controller.ITKycSaveControllerTest in saveKycInfoTest 
+ERROR: [main] 2016-10-17 13:57:26,640 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:26,641 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:26,641 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:26,641 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:27,073 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:27,433 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:27,433 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:27,433 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:27,434 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:27,434 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:27,434 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:27,435 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:27,788 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:27,789 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:27,789 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:27,789 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+DEBUG: [main] 2016-10-17 13:57:28,036 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.Pattern, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.Pattern.message}, payload=[Ljava.lang.Class;@73e71ddf, flags=[Ljavax.validation.constraints.Pattern$Flag;@4a5a56eb, regexp=.*, groups=[Ljava.lang.Class;@7100846f}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,042 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@e82ca6e, groups=[Ljava.lang.Class;@2cb80333}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,043 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.Size, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.Size.message}, min=1, payload=[Ljava.lang.Class;@2c7869a6, max=2147483647, groups=[Ljava.lang.Class;@15602819}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,357 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@132c0adc, groups=[Ljava.lang.Class;@307cfb59}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,358 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.Size, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.Size.message}, min=1, payload=[Ljava.lang.Class;@29618f7c, max=2147483647, groups=[Ljava.lang.Class;@44132b1d}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,359 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@51027d15, groups=[Ljava.lang.Class;@7a62173f}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,360 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.Size, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.Size.message}, min=1, payload=[Ljava.lang.Class;@5e5f3f90, max=2147483647, groups=[Ljava.lang.Class;@3f463757}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,362 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@1fa578a7, groups=[Ljava.lang.Class;@28942c2c}, constraintType=GENERIC}.
+DEBUG: [main] 2016-10-17 13:57:28,362 org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl Adding composing constraint: ConstraintDescriptorImpl{annotation=javax.validation.constraints.Size, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={message={javax.validation.constraints.Size.message}, min=1, payload=[Ljava.lang.Class;@779dfd5a, max=2147483647, groups=[Ljava.lang.Class;@25645d10}, constraintType=GENERIC}.
+INFO : [main] 2016-10-17 13:57:28,367 com.noblemktkyc.controller.KycSaveController inside KycSaveController :: saveKycInfo Method
+INFO : [main] 2016-10-17 13:57:28,368 com.noblemktkyc.controller.KycSaveController inside KycSaveController user detail is::com.noblemktkyc.model.AccountInfoModel@70981fe
+INFO : [main] 2016-10-17 13:57:28,368 com.noblemktkyc.controller.KycSaveController Inside KycSaveServiceImpl :: saveObject Method
+INFO : [main] 2016-10-17 13:57:28,369 com.noblemktkyc.fileoperation.FileOperationImp Inside FileOperationImp :: saveKycInfo Method
+INFO : [main] 2016-10-17 13:57:28,370 com.noblemktkyc.fileoperation.FileOperationImp   FileOperation::directory is createdD:/NobleMktKYC/KYCDocuments\customer_sample_jyoti@gmail.com
+INFO : [main] 2016-10-17 13:57:28,381 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::uploadFileToBox Method
+INFO : [main] 2016-10-17 13:57:28,381 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::uploadFileToBox Method :: Before uploading file AccountInfo_customer_sample_jyoti@gmail.com.txt
+INFO : [main] 2016-10-17 13:57:30,792 com.noblemktkyc.controller.KycSaveController inside controller ::AccountInfocustomer_sample_jyoti@gmail.com
+INFO : [main] 2016-10-17 13:57:30,800 com.noblemktkyc.controller.ITKycSaveControllerTest in uplodeFileTest
+ERROR: [main] 2016-10-17 13:57:30,801 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:30,801 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:30,801 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:30,802 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:31,269 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:31,638 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:31,638 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:31,638 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:31,638 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:31,639 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:31,639 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:31,639 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:32,120 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:32,121 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:32,121 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:32,121 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+ERROR: [main] 2016-10-17 13:57:32,137 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:32,138 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:32,138 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:32,138 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:32,610 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:32,985 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:32,986 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:32,986 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:32,986 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:32,987 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:32,987 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:32,987 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:33,352 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:33,352 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:33,353 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:33,353 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:33,355 com.noblemktkyc.controller.KycSaveController inside KycSaveController :: uploadFileHandler Method to save the file
+INFO : [main] 2016-10-17 13:57:33,355 com.noblemktkyc.controller.KycSaveController Inside KycSaveServiceImpl :: saveUploadedFileToDisk Method
+INFO : [main] 2016-10-17 13:57:33,356 com.noblemktkyc.fileoperation.FileOperationImp Inside FileOperationImp :: saveUploadedFileToDisk Method
+INFO : [main] 2016-10-17 13:57:33,357 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::uploadFileToBox Method
+INFO : [main] 2016-10-17 13:57:33,357 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::uploadFileToBox Method :: Before uploading file Ownership Entity Legal Doc_customer_sample_jyoti@gmail.com.jpg
+INFO : [main] 2016-10-17 13:57:35,169 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 13:57:35,169 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 13:57:35,169 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:57:35,170 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:57:35,170 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:57:35,170 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:57:35,654 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:57:36,027 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:36,027 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:36,028 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:36,028 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:57:36,028 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:36,029 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:36,029 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:36,442 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:57:36,443 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:57:36,443 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:57:36,443 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+DEBUG: [main] 2016-10-17 13:59:01,516 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 13:59:01,518 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 13:59:01,530 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 13:59:01,531 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 13:59:01,532 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 13:59:01,534 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy37
+DEBUG: [main] 2016-10-17 13:59:01,538 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 13:59:01,542 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 13:59:01,884 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 13:59:01,884 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 13:59:01,884 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 13:59:01,885 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 13:59:01,885 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 13:59:01,886 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 13:59:04,324 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 13:59:04,843 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:59:04,844 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:59:04,845 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:59:04,845 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 13:59:04,846 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:59:04,846 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:59:04,847 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:59:05,205 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 13:59:05,207 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 13:59:05,208 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 13:59:05,209 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress
+DEBUG: [main] 2016-10-17 14:00:25,217 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 14:00:25,218 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 14:00:25,230 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 14:00:25,232 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 14:00:25,233 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 14:00:25,234 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy37
+DEBUG: [main] 2016-10-17 14:00:25,239 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 14:00:25,243 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 14:00:25,479 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 14:00:25,479 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 14:00:25,480 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 14:00:25,480 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 14:00:25,480 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 14:00:25,481 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 14:00:27,714 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 14:00:28,222 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:00:28,224 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_complete
+INFO : [main] 2016-10-17 14:00:28,225 com.noblemktkyc.service.box.api.BoxApiServiceImpl deleted
+INFO : [main] 2016-10-17 14:00:29,122 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 14:00:29,124 com.noblemktkyc.service.box.api.BoxApiServiceImpl deleted
+INFO : [main] 2016-10-17 14:00:29,748 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 14:00:29,748 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:00:29,749 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:00:29,749 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sushi@gmail.com_inProgress
+INFO : [main] 2016-10-17 14:00:29,749 com.noblemktkyc.service.box.api.BoxApiServiceImpl deleted
+DEBUG: [main] 2016-10-17 14:01:10,475 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 14:01:10,477 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 14:01:10,489 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 14:01:10,490 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 14:01:10,491 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 14:01:10,493 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy37
+DEBUG: [main] 2016-10-17 14:01:10,497 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 14:01:10,501 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 14:01:10,708 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 14:01:10,709 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 14:01:10,709 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 14:01:10,709 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 14:01:10,709 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 14:01:10,710 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 14:01:13,025 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 14:01:13,419 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:13,420 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***pallavi_inProgress
+INFO : [main] 2016-10-17 14:01:13,420 com.noblemktkyc.service.box.api.BoxApiServiceImpl deleted
+INFO : [main] 2016-10-17 14:01:14,034 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:14,036 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+DEBUG: [main] 2016-10-17 14:01:35,528 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 14:01:35,530 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 14:01:35,541 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 14:01:35,543 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 14:01:35,544 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 14:01:35,545 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy37
+DEBUG: [main] 2016-10-17 14:01:35,550 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 14:01:35,554 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 14:01:35,756 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 14:01:35,757 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 14:01:35,757 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 14:01:35,757 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 14:01:35,758 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 14:01:35,760 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 14:01:38,025 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 14:01:38,441 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:38,442 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:38,444 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:39,785 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:39,787 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:39,789 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:01:39,790 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::createFolder Method
+DEBUG: [main] 2016-10-17 14:02:02,287 org.jboss.logging Logging Provider: org.jboss.logging.Log4jLoggerProvider
+INFO : [main] 2016-10-17 14:02:02,289 org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.0.1.Final
+DEBUG: [main] 2016-10-17 14:02:02,302 org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+DEBUG: [main] 2016-10-17 14:02:02,304 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+DEBUG: [main] 2016-10-17 14:02:02,305 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+DEBUG: [main] 2016-10-17 14:02:02,306 org.hibernate.validator.internal.engine.ConfigurationImpl Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy37
+DEBUG: [main] 2016-10-17 14:02:02,311 org.hibernate.validator.internal.xml.ValidationXmlParser Trying to load META-INF/validation.xml for XML based Validator configuration.
+DEBUG: [main] 2016-10-17 14:02:02,316 org.hibernate.validator.internal.xml.ValidationXmlParser No META-INF/validation.xml found. Using annotation based configuration only.
+INFO : [main] 2016-10-17 14:02:02,546 com.noblemktkyc.controller.UserController inside UserController :: createUser Method
+INFO : [main] 2016-10-17 14:02:15,549 com.noblemktkyc.controller.CommonController Inside CommonController ::  getDocumentPath Method
+ERROR: [main] 2016-10-17 14:02:21,931 com.noblemktkyc.service.UserServiceImpl Inside UserServiceImpl :: getUserBoxFolder method
+INFO : [main] 2016-10-17 14:02:24,081 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method
+INFO : [main] 2016-10-17 14:02:27,065 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::setBoxAPIConnection Method
+INFO : [main] 2016-10-17 14:02:29,737 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::
+INFO : [main] 2016-10-17 14:03:02,305 com.noblemktkyc.service.box.api.BoxApiServiceImpl BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::
+INFO : [main] 2016-10-17 14:03:26,485 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:03:30,949 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 14:03:42,861 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_newuser@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:03:46,213 com.noblemktkyc.service.box.api.BoxApiServiceImpl *****@@@@@@@@***sample_user@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:03:51,333 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample@gmail.com_fileCopyComplete
+INFO : [main] 2016-10-17 14:03:55,829 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: File/folder name is customer_sample_jyoti@gmail.com_inProgress
+INFO : [main] 2016-10-17 14:04:01,301 com.noblemktkyc.service.box.api.BoxApiServiceImpl Inside BoxApiServiceImpl::getBoxFolder Method :: User Folder found customer_sample_jyoti@gmail.com_inProgress

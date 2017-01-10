@@ -1,0 +1,472 @@
+
+<div id="Personal" class="">
+	<div data-ng-controller="personalController">
+		<data-ng-form name="addEditPersonalInfo" novalidate>
+		<div class="">
+			<div class="col-md-9 col-lg-9 col-sm-12">
+				<div id="tmm-form-wizard">
+					<div class="stage-container">
+						<div class="row">
+							<div class="stage tmm-current col-md-4 col-sm-4 col-xs-4">
+								<div class="stage-header head-icon head-icon-lock">
+									<img src="images/personal.png" alt="" />
+								</div>
+								<div class="stage-content">
+									<h3 class="stage-title">Personal Information</h3>
+
+								</div>
+							</div>
+							<!--/ .stage-->
+
+							<div class="stage col-md-4 col-sm-4 col-xs-4">
+								<div class="stage-header head-icon head-icon-user">
+									<img src="images/entity.png" alt="" />
+								</div>
+
+								<div class="stage-content">
+									<h3 class="stage-title">Entity Information</h3>
+
+								</div>
+							</div>
+							<!--/ .stage-->
+
+							<div class="stage col-md-4 col-sm-4 col-xs-4 last">
+								<div class="stage-header head-icon head-icon-payment">
+									<img src="images/lock.png" alt="" />
+								</div>
+								<div class="stage-content">
+									<h3 class="stage-title">Account Information</h3>
+
+								</div>
+							</div>
+							<!--/ .stage-->
+						</div>
+					</div>
+					<div id="sticky-anchor"></div>
+				</div>
+				<div class="clearfix"></div>
+
+				<div class="relative">
+					<h3 class="heading">Personal Details</h3>
+					<i class="pull-right accordion active btn-collapse"></i>
+					<div class="panel show">
+						<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="row">
+											<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+												<div class="form-group">
+													<label>Title</label> <select class="form-control width94"
+														data-ng-model="personalInfoModel.contact_information.title"
+														id="title">
+														<option selected="selected" value="">-Select-</option>
+														<option>Mr</option>
+														<option>Mrs</option>
+														<option>Miss</option>
+														<option>Ms</option>
+														<option>Dr</option>
+														<option>Prof</option>
+														<option>Rev</option>
+														<option>n/a</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
+												<div class="form-group"
+													data-ng-class="{ 'has-error' : addEditPersonalInfo.firstName.$invalid && addEditPersonalInfo.$submitted}">
+
+													<label>First Name <span class="error">*</span></label> <input
+														type="text" class="form-control" name=firstName
+														data-ng-model="personalInfoModel.firstName" required
+														alphabets id="firstName">
+												</div>
+											</div>
+										</div>
+
+
+
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : addEditPersonalInfo.lastName.$invalid && addEditPersonalInfo.$submitted}">
+											<label>Last Name<span class="error">*</span></label> <input
+												type="text" class="form-control" name="lastName"
+												data-ng-model="personalInfoModel.lastName" required
+												alphabets id="lastName">
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group">
+											<label>Maiden Name</label> <input type="text"
+												class="form-control"
+												data-ng-model="personalInfoModel.contact_information.maiden_Name"
+												alphabets id="maidenName">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : dobRequired && addEditPersonalInfo.$submitted}">
+											<label>Date Of Birth<span class="error">*</span></label>
+											<div class='input-group date' id='dateofBirth'>
+												<input type='text' class="form-control" name="dateofBirth"
+													data-ng-model=" personalinfomodel.contact_information.dob"
+													readonly="readonly" /> <span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-4 col-lg-4 col-sm-4">
+
+										<div class="form-group">
+
+											<label> National Identifier (e.g. SSN)</label> <input
+												type="text" class="form-control" name="nationalIdentifier"
+												data-ng-model="personalInfoModel.nationalIdentifier"
+												id="nationalIdentifier">
+										</div>
+									</div>
+
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : countryOfCitizenshipNotFound && !isCountryOfCitizenshipSelected
+                                             || (addEditPersonalInfo.citizenshipCountry.$invalid && addEditPersonalInfo.$submitted)}">
+											<label> Country of Citizenship<span class="error">*</span>
+												<span id="CountryError" class="has-error"
+												data-ng-show="countryOfCitizenshipNotFound && !isCountryOfCitizenshipSelected">
+													Country not found! </span>
+											</label>
+											<div mass-autocomplete>
+												<input type="text" class="form-control"
+													data-ng-model="personalInfoModel.contact_information.country_of_CitizenshipName"
+													mass-autocomplete-item="autocomplete_countryOfCitizenship"
+													name="citizenshipCountry" id="citizenshipCountry" required>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="relative">
+					<h3 class="heading">Contact Details</h3>
+					<i class="pull-right accordion active btn-collapse"></i>
+					<div class="panel show">
+						<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : addEditPersonalInfo.homeAddress.$invalid && addEditPersonalInfo.$submitted}">
+											<label>Home Address<span class="error">*</span></label> <input
+												type="text" class="form-control" name="homeAddress"
+												data-ng-model="personalInfoModel.contact_address.homeAddress"
+												required id="homeAddress">
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group">
+											<label>Street Address 2</label> <input type="text"
+												class="form-control"
+												data-ng-model="personalInfoModel.contact_address.streetAddress2"
+												id="streeAddress2">
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : contactCountryNotFound && !isContactCountrySelected
+                                             ||(addEditPersonalInfo.country.$invalid && addEditPersonalInfo.$submitted)}">
+											<label> Country<span class="error">*</span> <span
+												id="conatctCountryError" class="has-error"
+												data-ng-show="contactCountryNotFound && !isContactCountrySelected">
+													Country not found! </span>
+											</label>
+											<div mass-autocomplete>
+												<input type="text" class="form-control"
+													data-ng-model="personalInfoModel.contact_address.contactCountryName"
+													mass-autocomplete-item="autocomplete_contactCountries"
+													name="country" id="country" required>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' :contactStateNotFound && !isContactStateSelected
+                                              ||(addEditPersonalInfo.state.$invalid && addEditPersonalInfo.$submitted)}">
+											<label> State<span class="error">*</span> <span
+												id="conatctStateError" class="has-error"
+												data-ng-show="contactStateNotFound && !isContactStateSelected">
+													State not found! </span>
+											</label>
+											<div mass-autocomplete>
+												<input type="text" class="form-control"
+													data-ng-model="personalInfoModel.contact_address.state"
+													mass-autocomplete-item="autocomplete_states" name="state"
+													id="state" required>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : addEditPersonalInfo.city.$invalid && addEditPersonalInfo.$submitted}">
+											<label>City<span class="error">*</span></label> <input
+												type="text" class="form-control"
+												data-ng-model="personalInfoModel.contact_address.city"
+												name="city" required id="city">
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : addEditPersonalInfo.zip.$invalid && addEditPersonalInfo.$submitted}">
+											<label>ZIP/Postcode<span class="error">*</span></label> <input
+												type="text" class="form-control"
+												data-ng-model="personalInfoModel.contact_address.postcode"
+												name="zip" required numbers-only id="zip">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : addEditPersonalInfo.businessPhone.$invalid && addEditPersonalInfo.$submitted}">
+											<label>Business Phone<span class="error">*</span></label> <input
+												type="text" class="form-control" name="businessPhone"
+												data-ng-model="personalInfoModel.contact_address.businessPhone"
+												required numbers-only id="businessPhone">
+										</div>
+									</div>
+
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group">
+											<label>Mobile Phone</label> <input type="text"
+												class="form-control"
+												data-ng-model="personalInfoModel.contact_address.mobilePhone"
+												numbers-only id="mobilePhone">
+										</div>
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : (addEditPersonalInfo.email.$invalid && addEditPersonalInfo.$submitted) || invalidEmail }">
+											<label> Email<span class="error">*</span><span
+												id="emailMsg" class="has-error"
+												data-ng-show="addEditPersonalInfo.email.$invalid && !addEditPersonalInfo.email.$error.required">
+													Please enter valid email id </span>
+											</label> <input type="text" class="form-control" name="email"
+												data-ng-blur="emailValidate(personalInfoModel.contact_address.email,'email')"
+												data-ng-model="personalInfoModel.contact_address.email"
+												required id="email">
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				<div class="relative">
+					<h3 class="heading">Document Upload</h3>
+					<i class="pull-right accordion active btn-collapse"></i>
+					<div class="panel show">
+						<div class="col-md-12 col-lg-12 col-sm-12 box-theme">
+							<div class="row">
+								<div class="col-md-12 col-lg-12 col-sm-12">
+									<div class="col-md-4 col-lg-4 col-sm-4">
+										<div class="form-group"
+											data-ng-class="{ 'has-error' : docTypeRequired}">
+											<label>Document Type<span class="error">*</span></label> <select
+												class="form-control" name="documentType"
+												data-ng-model="personalInfoModel.documentType"
+												data-ng-change="checkDocType(personalInfoModel.documentType)"
+												id="documentType">
+												<option value="">-Select-</option>
+												<option>Proof of ID 1</option>
+												<option>Proof of ID 2</option>
+												<option>Personal W-9-Form</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix">
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12">
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : idTypeRequired}">
+												<label>ID Type<span class="error">*</span></label> <select
+													class="form-control" name="idType"
+													data-ng-model="personalInfoModel.idType"
+													data-ng-disabled="isW9DocType" id="idType">
+													<option value="">-Select-</option>
+													<option>Passport</option>
+													<option>Driver's Id</option>
+													<option>SSN</option>
+													<option>National Id</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' :  idNotRequired}">
+												<label>ID No.<span class="error">*</span></label> <input
+													type="text" class="form-control" name="idNo"
+													data-ng-model="personalInfoModel.idNo"
+													data-ng-disabled="isW9DocType" id="idNo">
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' :(countryOfIssueNotFound && !isCountryOfIssueSelected) || countryofissueRequired}">
+												<label> Country Of Issue<span class="error">*</span>
+													<span id="countryOfIssueError" class="has-error"
+													data-ng-show="countryOfIssueNotFound && !isCountryOfIssueSelected">
+														Country not found! </span>
+												</label>
+												<div mass-autocomplete>
+													<input type="text" class="form-control"
+														data-ng-model="personalInfoModel.idCountryName"
+														mass-autocomplete-item="autocomplete_countryOfIssue"
+														name="idCountry" id="idCountry"
+														data-ng-disabled="isW9DocType">
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12">
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : idIssueDateRequired}">
+												<label>ID Issue Date<span class="error">*</span></label>
+												<div class='input-group date' id='idIssueDate'>
+													<input type='text' class="form-control" name="idIssueDate"
+														data-ng-model="personalInfoModel.idIssueDate"
+														readonly="readonly" data-ng-disabled="isW9DocType" /> <span
+														class="input-group-addon"> <span
+														class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group"
+												data-ng-class="{ 'has-error' : expiryDateRequired}">
+												<label>ID Expiry Date<span class="error">*</span></label>
+												<div class='input-group date' id='idExpiryDate'>
+													<input type='text' class="form-control" name="idExpiryDate"
+														data-ng-model="personalInfoModel.idExpiryDate"
+														readonly="readonly" data-ng-disabled="isW9DocType" /> <span
+														class="input-group-addon"> <span
+														class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-lg-4 col-sm-4">
+											<div class="form-group margint13">
+												<span class="btn btn-upload btn-file"> Upload <input
+													type="file" data-ng-model="personalInfoModel.file"
+													ng-click="validateForm($event)"
+													onchange="angular.element(this).scope().selectFile(this.files)"
+													id="file" name="file">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="doc-tble col-md-12" data-ng-show="isFileSelected">
+									<h3 class="heading">Uploaded Documents</h3>
+									<table class="table table-responsive">
+										<thead>
+											<tr>
+												<th>Document Type</th>
+												<th>Id Type</th>
+												<th>Document Name</th>
+											</tr>
+										</thead>
+										<tbody ng-repeat="doc in docArray">
+											<tr>
+												<td>{{doc.documentType}}</td>
+												<td>{{doc.dtype}}</td>
+												<td>{{doc.originalName}}</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="text-right paddingtb15">
+					<button class="btn btn-default marginr25 btn-save" type="button"
+						data-ng-click="resetPersonalInfo()" id="btnReset">Reset</button>
+					<button class="btn btn-default marginr25 btn-save"
+						data-ng-click="savePersonalInfo()" id="btnSave">Save</button>
+					<button class="btn btn-forgot p-next"
+						data-ng-click="personalNext()" id="btnNext">Next</button>
+				</div>
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-12 ">
+				<div class="right-pannel" id="sticky">
+					<div class="row">
+						<div class="col-md-12 col-sm-8">
+							<h2 class="right-pannel-heading-top">What We Need</h2>
+							<div class="content">
+								<p></p>
+								<span class="bold">ALL DOCUMENTS MUST SHOW THE ADDRESS</span> <span>
+									when it is present in the document </span>
+								<ul>
+									<li>Valid Passport</li>
+									<li>Valid Driver's ID / Government Issued ID / Work ID
+										with Photo</li>
+									<li>Evidence of company physical address such as utility
+										bill or lease agreement</li>
+									<li>Evidence of Source of Funds such as bank statements or
+										financial statements</li>
+								</ul>
+								<p class="bold">Only PDF, JPEG or PNG files can be uploaded</p>
+
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-4">
+							<h2 class="right-pannel-heading-top">Next Steps</h2>
+							<div class="content">
+								<p>Once we have received all your information, we will
+									contact you to let you know the KYC process has been completed.
+									We will then send you.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" name="filePath" value="{{documentPath}}" /> </data-ng-form>
+	</div>
+</div>

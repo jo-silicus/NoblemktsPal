@@ -1,0 +1,6 @@
+<html>
+	<body>
+		Hi <br/>
+		This is to remind you that your KYC process is pending. Please visit following link to complete your KYC process.</br>
+		<a href=$encryptedEmailId>$encryptedEmailId</a>
+</html>

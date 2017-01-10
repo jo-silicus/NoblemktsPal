@@ -1,0 +1,69 @@
+
+<header class="main">
+	<div class="container-fluid pull-left">
+		<a class="logo" href="#"><img src="images/w-logo.png" alt="logo" /></a>
+	</div>
+	<div class="pull-right welcome">
+		<span class="welcome-text">Welcome&nbsp;{{loggedInUserName}}</span>|<a
+			ng-click="logOutUser()" class="logout-text"><i
+			class="glyphicon glyphicon-log-out"></i> Logout</a>
+	</div>
+	<div class="clear"></div>
+</header>
+<div class="clear"></div>
+<div class="container-fluid content-area">
+
+	<div class="tab-content">
+		<div data-ng-include src="'app/home/views/personalInfo.html'"
+			class="full-width"></div>
+		<div data-ng-include src="'app/home/views/entityInfo.html'"
+			class="full-width"></div>
+		<div data-ng-include src="'app/home/views/accountInfo.html'"
+			class="full-width"></div>
+	</div>
+</div>
+
+<div class="alert alert-danger alert-box" role="alert"
+	id="maxFileSizeError" style="display: none">File size should be
+	less than or equal to 10 mb !</div>
+
+
+
+
+<div id="modalConfirmYesNo" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="lblTitleConfirmYesNo" class="modal-title">Confirmation</h4>
+			</div>
+			<div class="modal-body">
+				<p id="lblMsgConfirmYesNo">A file is already uploaded for this
+					document type. Are you sure you want to overwrite it?</p>
+			</div>
+			<div class="modal-footer">
+				<button id="btnYes" type="button" class="btn btn-primary">
+					Yes</button>
+				<button id="btnNo" type="button" class="btn btn-default">
+					No</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="modalDirty" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="lblTitleConfirmYesNo" class="modal-title">Warning!</h4>
+			</div>
+			<div class="modal-body">
+				<p id="lblMsgConfirmYesNo">You have unsaved changes, please save
+					the changes!</p>
+			</div>
+			<div class="modal-footer">
+				<button id="btnOK" type="button" class="btn btn-primary"
+					data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+

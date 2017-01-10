@@ -1,0 +1,26 @@
+<data-ng-form name="loginForm" class="">
+<div class="container" data-ng-controller="loginController">
+	<div class="login">
+		<div class="logo">
+			<img src="images/logo.png" />
+		</div>
+		<div class="login-pannel">
+			<h3 class="login-heading">SIGN IN</h3>
+			<h4>Email Id</h4>
+			<div class="form-group"
+				data-ng-class="{'has-error' : loginForm.email.$invalid && loginForm.$submitted}">
+				<input type="text" name="email" class="form-control" id="email"
+					data-ng-model="login.userName" required email-validate /> <span
+					id="emailMsg" class="has-error"
+					data-ng-show="loginForm.email.$error.required && loginForm.$submitted 
+						  ||(loginForm.email.$invalid && !loginForm.email.$error.required && loginForm.$submitted)">Please
+					enter a valid email Id</span>
+			</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-primery btn-sign"
+					data-ng-click="login()">Next</button>
+			</div>
+		</div>
+	</div>
+</div>
+</data-ng-form>
