@@ -147,7 +147,7 @@
 			<version>0.6-SNAPSHOT</version>
 		</dependency> -->
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.noblemarkets.api</groupId>
 			<artifactId>noble-api</artifactId>
 			<version>0.5</version>
@@ -156,7 +156,7 @@
 			<groupId>com.noblemarkets.api</groupId>
 			<artifactId>unify</artifactId>
 			<version>0.6-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 		<!-- display logger in color -->
 		<dependency>
 			<groupId>com.jcabi</groupId>
