@@ -22,8 +22,8 @@ import com.box.sdk.BoxItem;
 import com.box.sdk.BoxItem.Info;
 import com.box.sdk.BoxSharedLink;
 import com.box.sdk.FileUploadParams;
-import com.noblemarkets.storage.box.NobleBoxClient;
-import com.noblemarkets.storage.box.NobleBoxConnectionSpecification;
+//import com.noblemarkets.storage.box.NobleBoxClient;
+//import com.noblemarkets.storage.box.NobleBoxConnectionSpecification;
 
 /**
  * @author : Silicus Technologies, 2016
@@ -40,10 +40,12 @@ public class BoxApiServiceImpl implements BoxApiService {
 	private void setBoxAPIConnection() throws Exception {
 		logger.info("Inside BoxApiServiceImpl::setBoxAPIConnection Method");
 		try {
-			NobleBoxConnectionSpecification intakeConnSpec = new NobleBoxConnectionSpecification("kycintake");
+			//NobleBoxConnectionSpecification intakeConnSpec = new NobleBoxConnectionSpecification("kycintake");
+			BoxAPIConnection intakeConnSpec=new BoxAPIConnection("kycintake");
 			logger.info("BoxApiServiceImpl::setBoxAPIConnection Method::before creating connection::");
 			if (intakeConnSpec != null) {
-				this.apiConn = NobleBoxClient.getBoxClient(intakeConnSpec);
+				//this.apiConn = NobleBoxClient.getBoxClient(intakeConnSpec);
+				this.apiConn = intakeConnSpec;
 				logger.info("BoxApiServiceImpl::setBoxAPIConnection Method::after creating connection::");
 			}
 		} catch (BoxAPIException e) {
@@ -51,7 +53,7 @@ public class BoxApiServiceImpl implements BoxApiService {
 			logger.error(e.getStackTrace());
 			logger.error("BoxAPIException in BoxApiServiceImpl::setBoxAPIConnection Method::exception is" + e);
 			throw e;
-		} catch (AccessDeniedException e) {
+		} /*catch (AccessDeniedException e) {
 			logger.error("No path specified for file private_key_intake.pem in config.properties");
 			logger.error(e.getStackTrace());
 			logger.error("AccessDeniedException in BoxApiServiceImpl::setBoxAPIConnection Method::exception is" + e);
@@ -67,7 +69,7 @@ public class BoxApiServiceImpl implements BoxApiService {
 			logger.error(e.getStackTrace());
 			logger.error("IOException in BoxApiServiceImpl::setBoxAPIConnection Method::exception is" + e);
 			throw e;
-		} catch (Exception e) {
+		} */catch (Exception e) {
 			logger.error(e.getMessage());
 			logger.error(e.getStackTrace());
 			logger.error("Exception in BoxApiServiceImpl::setBoxAPIConnection Method::exception is" + e);
