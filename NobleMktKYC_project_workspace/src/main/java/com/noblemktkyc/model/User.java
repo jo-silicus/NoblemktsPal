@@ -15,6 +15,9 @@ public class User implements Serializable {
 	private String directoryPath;
 	private BoxFolder boxFolder;
 	private String status;
+	public User() {
+		//constructor stub
+	}
 
 	public String getUserName() {
 		return userName;

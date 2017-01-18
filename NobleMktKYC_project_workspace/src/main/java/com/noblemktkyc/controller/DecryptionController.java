@@ -29,6 +29,10 @@ public class DecryptionController {
 	@Autowired
 	private Decryptor decryptorService;
 
+	public DecryptionController() {
+
+	}
+
 	/**
 	 * To decrypt email id of user from URL. The email id will be used to fetch
 	 * KYC information from JSONs.
@@ -36,6 +40,7 @@ public class DecryptionController {
 	 * @param httpServletRequest
 	 * @return
 	 */
+
 	@RequestMapping(value = "/decryptUrl", method = RequestMethod.GET)
 	public ResponseEntity<List<String>> decryptUrl(HttpServletRequest httpServletRequest) {
 		logger.info("Inside DecryptionController :: decryptUrl Method");

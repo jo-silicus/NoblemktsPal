@@ -35,6 +35,10 @@ public class EntityDetailsModel {
 	private String registered_City;
 	@NotEmpty
 	private String registered_Postcode;
+	
+	public EntityDetailsModel() {
+		// constructor stub
+	}
 
 	public String getEmployer_Identification_Number() {
 		return employer_Identification_Number;

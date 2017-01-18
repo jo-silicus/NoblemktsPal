@@ -29,7 +29,22 @@ public class AccountInfoModel implements Serializable, Model {
 	private String payment_code_one_id;
 	private String payment_code_one_ref;
 	private String corrRoutingNo;
+	private String bank;
 
+	// Wallet Account Address
+	private String walletAccountName;
+	private String walletAddress;
+	private String corraddress1;
+	private String corraddress2;
+	private String corrAccountsCountryName;
+	private String corrstate;
+	private String corrcity;
+	private String corrbankName;
+	private String corrzip;
+
+	public AccountInfoModel() {
+		// constructor stub
+	}
 	public String getPayment_code_one_id() {
 		return payment_code_one_id;
 	}
@@ -54,18 +69,6 @@ public class AccountInfoModel implements Serializable, Model {
 		this.corrRoutingNo = corrRoutingNo;
 	}
 
-	private String bank;
-
-	// Wallet Account Address
-	private String walletAccountName;
-	private String walletAddress;
-	private String corraddress1;
-	private String corraddress2;
-	private String corrAccountsCountryName;
-	private String corrstate;
-	private String corrcity;
-	private String corrbankName;
-	private String corrzip;
 	@Valid
 	private BankAccountAddressModel account_information;
 

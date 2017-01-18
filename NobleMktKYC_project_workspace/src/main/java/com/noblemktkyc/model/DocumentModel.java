@@ -9,6 +9,9 @@ public class DocumentModel {
 	private String originalName;
 	private String documentType;
 	private String file_path;
+	public DocumentModel() {
+		//constructor stub
+	}
 
 	public String getDocumentType() {
 		return documentType;

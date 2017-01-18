@@ -13,7 +13,7 @@ import com.noblemktkyc.model.User;
  */
 
 public interface FileOperation {
-	void saveKycInfo(Model modelInfo, User userInfo) throws Exception;
+	void saveKycInfo(Model modelInfo, User userInfo) throws  Exception;
 
 	String saveUploadedFileToDisk(MultipartFile file, String fileName, User userInfo) throws Exception;
 

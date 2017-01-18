@@ -54,6 +54,10 @@ public class KycSaveController {
 
 	@Autowired
 	CustomValidator customValidator;
+	
+	public KycSaveController() {
+		//constructor stub
+	}
 
 	/**
 	 * 
@@ -102,7 +106,7 @@ public class KycSaveController {
 			 */
 			HttpSession session = httpServletRequest.getSession(false);
 			if (kycInfoModel != null && kycInfoModel.getUserName() != null
-					&& session.getAttribute("userInfo") != null) {
+					&& session.getAttribute("userInfo") != null &&  kycInfoModel.getType()!=null) {
 				kycSaveService.saveKycInfo(kycInfoModel, (User) session.getAttribute("userInfo"));
 			}
 

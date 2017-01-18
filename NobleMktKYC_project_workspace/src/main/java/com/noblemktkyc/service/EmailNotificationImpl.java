@@ -35,6 +35,9 @@ public class EmailNotificationImpl implements EmailNotification {
 
 	@Autowired
 	VelocityEngine velocityEngine;
+	public EmailNotificationImpl() {
+		//constructor stub
+	}
 
 	/**
 	 * Set the email details and send email

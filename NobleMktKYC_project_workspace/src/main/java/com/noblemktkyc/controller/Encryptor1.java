@@ -1,11 +1,13 @@
 package com.noblemktkyc.controller;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -48,7 +50,7 @@ public class Encryptor1 {
 		return null;
 	}
 
-	public String[] encryptObject(Object obj) throws Exception {
+	public String[] encryptObject(Object obj) throws IOException,Exception {
 		logger.info("Inside Encryptor:: encryptObject method");
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		ObjectOutput out = new ObjectOutputStream(stream);
@@ -107,8 +109,9 @@ public class Encryptor1 {
 		try {
 			encryptedViewController.getEncryptedUrl("jyoti@gmail.com");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			logger.error("Exception Inside Encryptor:: main method", e);
+			
 		}
 
 	}

@@ -20,9 +20,13 @@ public class CommonController implements ServletContextAware {
 
 	@Autowired
 	ServletContext context;
-	
+
 	@Value("${document_path}") // get the value from the property file
 	private String document_path;
+
+	public CommonController() {
+
+	}
 
 	@Override
 	public void setServletContext(ServletContext servletContext) {
@@ -37,7 +41,7 @@ public class CommonController implements ServletContextAware {
 	 */
 	public String getDocumentPath() {
 		logger.info("Inside CommonController ::  getDocumentPath Method");
-		if (document_path == null || (document_path != null && document_path.isEmpty())) {
+		if (document_path == null || document_path.isEmpty()) {
 			return context.getRealPath("/KYCDocuments");
 		}
 		return document_path;

@@ -28,6 +28,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class MailConfig {
 	@Autowired
 	private Environment environment;
+	
+	public MailConfig() {
+		
+	}
 
 	/**
 	 * Configuration for setting the properties for sending email

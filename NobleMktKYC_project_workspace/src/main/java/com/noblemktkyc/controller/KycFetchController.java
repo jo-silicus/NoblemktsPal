@@ -36,6 +36,10 @@ public class KycFetchController {
 	private CommonController commonController;
 	@Autowired
 	Environment env;
+	
+	public KycFetchController() {
+		//Constructor 
+	}
 
 	/**
 	 * To fetch KYC details of the user from JSON files

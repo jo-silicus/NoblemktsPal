@@ -24,6 +24,9 @@ public class EntityContactDetails {
 	private String alt_Phone;
 
 	private String reports_Email;
+	public EntityContactDetails() {
+		// constructor stub
+	}
 
 	public String getPostal_Address() {
 		return postal_Address;

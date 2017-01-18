@@ -31,6 +31,11 @@ public class EmailNotificationController {
 	private String emailSource;
 	@Value("${emailSubject}")
 	private String emailSubject;
+	
+	
+	public EmailNotificationController() {
+		//Constructor 
+	}
 
 	/**
 	 * To send a KYC process completion confirmation to the registered user

@@ -11,6 +11,9 @@ public class DocumentUploadDetailModel extends DocumentModel {
 	private String idNo;
 	private String idExpiryDate;
 	private String country_issue;
+	public DocumentUploadDetailModel() {
+		//constructor stub
+	}
 
 	public String getCountry_issue() {
 		return country_issue;

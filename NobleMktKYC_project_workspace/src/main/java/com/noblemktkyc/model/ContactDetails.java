@@ -31,6 +31,9 @@ public class ContactDetails {
 	@Pattern(regexp = "^[0-9]+$")
 	private String mobilePhone;
 
+	public ContactDetails() {
+		//  constructor stub
+	}
 	public String getPostcode() {
 		return postcode;
 	}

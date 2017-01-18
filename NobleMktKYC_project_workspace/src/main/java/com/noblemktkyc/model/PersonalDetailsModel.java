@@ -13,6 +13,9 @@ public class PersonalDetailsModel {
 	private String title;
 	@NotEmpty
 	private String country_of_Citizenship;
+	public PersonalDetailsModel() {
+		//constructor stub
+	}
 
 	public String getDob() {
 		return dob;

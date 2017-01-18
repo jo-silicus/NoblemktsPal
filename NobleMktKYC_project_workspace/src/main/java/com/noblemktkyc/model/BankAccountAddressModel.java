@@ -17,7 +17,9 @@ public class BankAccountAddressModel {
 	@NotEmpty
 	private String addrCity;
 	private String accountCountry;
-
+	public BankAccountAddressModel() {
+		//constructor stub
+	}
 	public String getAddrLine1() {
 		return addrLine1;
 	}

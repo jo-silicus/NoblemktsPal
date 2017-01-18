@@ -2,7 +2,9 @@ package com.noblemktkyc.fileoperation;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
@@ -46,6 +48,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 		logger.info("Inside FileOperationImp :: saveKycInfo Method");
 		File modelDataFile = null;
 		BufferedOutputStream stream = null;
+		OutputStream fileStream=null;
 		String folderName = userInfo.getUserName() + userInfo.getStatus();
 		String fileName = modelInfo.getType() + "_" + userInfo.getUserName() + ".txt";
 		try {
@@ -66,7 +69,8 @@ public class FileOperationImp implements Serializable, FileOperation {
 			throw e;
 		}
 		try {
-			stream = new BufferedOutputStream(new FileOutputStream(modelDataFile));
+		    fileStream=new FileOutputStream(modelDataFile);
+			stream = new BufferedOutputStream(fileStream);
 			ObjectMapper mapper = new ObjectMapper();
 			stream.write(mapper.writeValueAsString(modelInfo).getBytes());
 		} catch (Exception e) {
@@ -76,6 +80,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 		} finally {
 			if (stream != null) {
 				stream.close();
+				fileStream.close();
 			}
 		}
 
@@ -93,7 +98,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 	 * @return
 	 * @throws Exception
 	 */
-	public String saveUploadedFileToDisk(MultipartFile file, String fileName, User userInfo) throws Exception {
+	public String saveUploadedFileToDisk(MultipartFile file, String fileName, User userInfo) throws  FileNotFoundException,Exception {
 		logger.info("Inside FileOperationImp :: saveUploadedFileToDisk Method");
 		File convFile;
 		String folderName = userInfo.getUserName() + userInfo.getStatus();

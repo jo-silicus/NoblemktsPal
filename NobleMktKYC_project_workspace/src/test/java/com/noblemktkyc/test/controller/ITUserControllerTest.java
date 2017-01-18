@@ -32,10 +32,15 @@ import com.noblemktkyc.configuration.ApplicationInitializer;
 public class ITUserControllerTest {
 
 	final static Logger logger = Logger.getLogger(ITUserControllerTest.class);
+	
 
 	@Autowired
 	private WebApplicationContext wac;
 	private MockMvc mockMvc;
+	
+	public ITUserControllerTest() {
+		// constructor stub
+	}
 
 	@Before
 	public void setUp() {
