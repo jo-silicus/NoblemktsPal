@@ -85,7 +85,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 		}
 
 		// Upload the above file to Box
-		boxService.uploadFileToBox(fileName, modelDataFile, userInfo.getBoxFolder());
+		//boxService.uploadFileToBox(fileName, modelDataFile, userInfo.getBoxFolder());
 
 	}
 
@@ -95,7 +95,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 	 * @param file
 	 * @param fileName
 	 * @param userInfo
-	 * @return
+	 * @return 
 	 * @throws Exception
 	 */
 	public String saveUploadedFileToDisk(MultipartFile file, String fileName, User userInfo) throws  FileNotFoundException,Exception {
@@ -123,8 +123,8 @@ public class FileOperationImp implements Serializable, FileOperation {
 		}
 
 		// Upload the above file to Box
-		return boxService.uploadFileToBox(fileName, convFile, userInfo.getBoxFolder());
-
+		//return boxService.uploadFileToBox(fileName, convFile, userInfo.getBoxFolder());
+        return "done";
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 						"Inside FileOperationImp :: renameDirectory Method :: Completed folder already exists hence Cannot be rename");
 			}
 
-			boxService.reNameFolder(oldName, newName);
+			//boxService.reNameFolder(oldName, newName);
 
 		} catch (Exception e) {
 			logger.error(e.getMessage());
@@ -179,7 +179,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 			String finalStatus) throws Exception {
 		logger.info("Inside FileOperationImp :: readFileInObject Method");
 		try {
-			boxService.downloadFolderFromBox(userName + finalStatus, listInfoType, path, userName);
+			//boxService.downloadFolderFromBox(userName + finalStatus, listInfoType, path, userName);
 			Map<String, Object> kycDetail = null;
 			ObjectMapper objectMapper = new ObjectMapper();
 			for (String infoType : listInfoType) {

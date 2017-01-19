@@ -32,9 +32,9 @@ public class Encryptor1 {
 	private String keyString = "adkj@#$0p#@adflkj)(*jlj@#$#@LKjasdjlkj<.,mo@#$@#kljlkdsuqrs";
 	final static Logger logger = Logger.getLogger(Encryptor1.class);
 	//@Value("${applicationUrl}")
-	private String applicationUrl="http://10.55.1.131:9591/NobleMktKYC/static/index.html#/login?";
+	private String applicationUrl="http://10.55.1.19:8088/NobleMktKYC/static/index.html#/login?";
 
-	public String[] getEncryptedUrl(String hash) {
+	public String[] getEncryptedUrl(String hash) { 
 		logger.info("Inside Encryptor:: getEncryptedUrl method");
 		try {
 			String[] encrypted = encryptObject(hash);
@@ -107,7 +107,7 @@ public class Encryptor1 {
 		logger.info("Inside Encryptor:: main method");
 		Encryptor1 encryptedViewController = new Encryptor1();
 		try {
-			encryptedViewController.getEncryptedUrl("jyoti@gmail.com");
+			encryptedViewController.getEncryptedUrl("pallshivmaniczade@gmail.com");
 		} catch (Exception e) {
 			
 			logger.error("Exception Inside Encryptor:: main method", e);

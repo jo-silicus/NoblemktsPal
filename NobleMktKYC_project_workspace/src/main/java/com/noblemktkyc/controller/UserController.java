@@ -54,7 +54,7 @@ public class UserController {
 		user.setDirectoryPath(commonController.getDocumentPath());
 		user.setStatus(status);
 		try {
-			user.setBoxFolder(userService.getUserBoxFolder(userName + status));
+			//user.setBoxFolder(userService.getUserBoxFolder(userName + status));
 			HttpSession session = request.getSession(true);
 			session.setAttribute("userInfo", user);
 		} catch (Exception e) {
@@ -65,6 +65,6 @@ public class UserController {
 		}
 		
 		return new ResponseEntity<String>(HttpStatus.OK);
-	}
+	} 
 
 }
