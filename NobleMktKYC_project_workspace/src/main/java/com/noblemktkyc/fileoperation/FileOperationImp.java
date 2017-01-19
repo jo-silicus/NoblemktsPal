@@ -84,8 +84,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 			}
 		}
 
-		// Upload the above file to Box
-		//boxService.uploadFileToBox(fileName, modelDataFile, userInfo.getBoxFolder());
+		
 
 	}
 
@@ -122,8 +121,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 			}
 		}
 
-		// Upload the above file to Box
-		//return boxService.uploadFileToBox(fileName, convFile, userInfo.getBoxFolder());
+	
         return "done";
 	}
 
@@ -154,8 +152,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 						"Inside FileOperationImp :: renameDirectory Method :: Completed folder already exists hence Cannot be rename");
 			}
 
-			//boxService.reNameFolder(oldName, newName);
-
+		
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			logger.error(e.getStackTrace());
@@ -179,7 +176,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 			String finalStatus) throws Exception {
 		logger.info("Inside FileOperationImp :: readFileInObject Method");
 		try {
-			//boxService.downloadFolderFromBox(userName + finalStatus, listInfoType, path, userName);
+			
 			Map<String, Object> kycDetail = null;
 			ObjectMapper objectMapper = new ObjectMapper();
 			for (String infoType : listInfoType) {

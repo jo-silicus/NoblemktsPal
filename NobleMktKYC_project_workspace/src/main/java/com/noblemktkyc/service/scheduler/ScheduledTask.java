@@ -31,7 +31,7 @@ public class ScheduledTask {
 	public void doTask() throws Exception {
 		Date now = new Date();
 		String strDate = sdfDate.format(now);
-		System.out.println("inside email check================" + strDate);
+		
 		List<String> emailList = boxApiService.getEmailIdsOfIncompleteKycForms();
 		for (String emailId : emailList) {
 			email.sendReminderEmailToCompleteKyc(emailId, "testemailmkt2016@gmail.com", "Reminder for kyc completion",

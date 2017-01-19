@@ -28,6 +28,9 @@ public class DecryptorImpl implements Decryptor {
 
 	@Value("${keyString}")
 	private String keyString;
+	public DecryptorImpl() {
+		//constructor stub
+	}
 
 	/**
 	 * Decrypts the input string
@@ -51,8 +54,6 @@ public class DecryptorImpl implements Decryptor {
 		Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 		IvParameterSpec ivSpec = new IvParameterSpec(rawIV);
 
-		// byte[] randBytes = new byte[16];
-		// IvParameterSpec ivSpec = new IvParameterSpec(randBytes);
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");
 
 		digest.update(keyString.getBytes());

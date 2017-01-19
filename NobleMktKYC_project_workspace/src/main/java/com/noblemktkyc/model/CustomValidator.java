@@ -56,28 +56,27 @@ public class CustomValidator implements Validator {
 
 				for (DocumentUploadDetailModel documentUploadDetailModel : user.getDocumentUploadDetail()) {
 
-					if (documentUploadDetailModel != null) {
-						if ((documentUploadDetailModel.getIdExpiryDate() != null
-								&& !documentUploadDetailModel.getIdExpiryDate().isEmpty())
-								&& (documentUploadDetailModel.getIdIssueDate() != null
-										&& !documentUploadDetailModel.getIdIssueDate().isEmpty())) {
+					if (documentUploadDetailModel != null
+							&& (documentUploadDetailModel.getIdExpiryDate() != null
+									&& !documentUploadDetailModel.getIdExpiryDate().isEmpty())
+							&& (documentUploadDetailModel.getIdIssueDate() != null
+									&& !documentUploadDetailModel.getIdIssueDate().isEmpty())) {
 
-							try {
-								Date issueDate = dateFormat.parse(documentUploadDetailModel.getIdIssueDate());
+						try {
+							Date issueDate = dateFormat.parse(documentUploadDetailModel.getIdIssueDate());
 
-								Date expiryDate = dateFormat.parse(documentUploadDetailModel.getIdExpiryDate());
-								if (issueDate.compareTo(expiryDate) > 0) {
-									logger.error("Issue date must be earlier than expiry date" + issueDate + " "
-											+ expiryDate);
-									errors.reject("idIssueDate.validation."
-											+ documentUploadDetailModel.getDtype().replace(" ", ""));
-								}
-							} catch (ParseException e) {
-								logger.error("ParseException in validate" + e);
-
+							Date expiryDate = dateFormat.parse(documentUploadDetailModel.getIdExpiryDate());
+							if (issueDate.compareTo(expiryDate) > 0) {
+								logger.error(
+										"Issue date must be earlier than expiry date" + issueDate + " " + expiryDate);
+								errors.reject("idIssueDate.validation."
+										+ documentUploadDetailModel.getDtype().replace(" ", ""));
 							}
+						} catch (ParseException e) {
+							logger.error("ParseException in validate" + e);
 
 						}
+
 					}
 
 				}

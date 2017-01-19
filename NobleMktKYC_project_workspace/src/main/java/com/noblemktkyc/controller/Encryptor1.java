@@ -50,7 +50,7 @@ public class Encryptor1 {
 		return null;
 	}
 
-	public String[] encryptObject(Object obj) throws IOException,Exception {
+	public String[] encryptObject(Object obj) throws Exception {
 		logger.info("Inside Encryptor:: encryptObject method");
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		ObjectOutput out = new ObjectOutputStream(stream);

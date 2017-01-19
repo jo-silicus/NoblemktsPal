@@ -38,7 +38,7 @@ public class ITUserControllerTest {
 	private WebApplicationContext wac;
 	private MockMvc mockMvc;
 	
-	public ITUserControllerTest() {
+private ITUserControllerTest() {
 		// constructor stub
 	}
 

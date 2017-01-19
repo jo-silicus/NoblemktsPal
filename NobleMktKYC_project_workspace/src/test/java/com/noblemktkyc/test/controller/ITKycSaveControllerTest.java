@@ -36,6 +36,9 @@ public class ITKycSaveControllerTest {
     private TestSupport testSupportMethods =new TestSupport(); 
 	@Autowired
 	UserService mockUserService;
+	public ITKycSaveControllerTest() {
+		//constructor stub
+	}
 	
 	@Before
 	public void setUp() {
@@ -58,7 +61,6 @@ public class ITKycSaveControllerTest {
 	public void saveKycInfoTest() throws Exception {
 	
 		testSupportMethods.createPersonalModelForTestInString();
-		System.out.println("================%%%%%%%%%%%%%%%%%%%%%"+testSupportMethods.createPersonalModelForTestInString());
 		mockMvc.perform(post("/saveKycInfo/").content(testSupportMethods.createPersonalModelForTestInString()).contentType(MediaType.APPLICATION_JSON_VALUE).sessionAttr("userInfo", testSupportMethods.setSessionForMockTest(mockUserService)))
 		.andExpect(status().isOk());
 		

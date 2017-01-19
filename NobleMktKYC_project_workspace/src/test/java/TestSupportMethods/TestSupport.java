@@ -35,7 +35,7 @@ public class TestSupport {
 	}
 
 	public String createPersonalModelForTestInString() throws Exception {
-		System.out.println("hi me ya hu;;;;;;;;;;;;;;;;;;;;;;;;;;");
+		
 		ObjectMapper mapperObj = new ObjectMapper();
 		PersonalInfoModel model=new PersonalInfoModel();
 		model.setType("PersonalInfo");
@@ -43,7 +43,7 @@ public class TestSupport {
 		model.setFirstName("pallavi");
 		model.setLastName("zade");
 		model.setUserName("pallavi");
-		System.out.println(mapperObj.writeValueAsString(model));
+		
 		return mapperObj.writeValueAsString(model);
 
 	}

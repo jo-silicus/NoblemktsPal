@@ -29,7 +29,7 @@ public class EncryptorImpl implements Encryptor {
 
 	/*
 	 * @Value("${keyString}") // get the value from the property file for max
-	 * file size private String keyString;
+	
 	 */
 	private String keyString = "adkj@#$0p#@adflkj)(*jlj@#$#@LKjasdjlkj<.,mo@#$@#kljlkdsuqrs";
 	final static Logger logger = Logger.getLogger(EncryptorImpl.class);

@@ -108,9 +108,10 @@ public class KycSaveController {
 			if (kycInfoModel != null && kycInfoModel.getUserName() != null
 					&& session.getAttribute("userInfo") != null &&  kycInfoModel.getType()!=null) {
 				kycSaveService.saveKycInfo(kycInfoModel, (User) session.getAttribute("userInfo"));
+				logger.info("inside controller ::" + kycInfoModel.getType() + kycInfoModel.getUserName());
 			}
 
-			logger.info("inside controller ::" + kycInfoModel.getType() + kycInfoModel.getUserName());
+			
 
 			if (errorList != null && errorList.size() > 0) {
 				return new ResponseEntity<List<String>>(errorList, HttpStatus.INTERNAL_SERVER_ERROR);
