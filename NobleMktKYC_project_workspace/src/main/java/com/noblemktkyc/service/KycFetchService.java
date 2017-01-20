@@ -9,7 +9,7 @@ import java.util.Map;
  *         Interface for fetch service method
  * 
  */
-
+@FunctionalInterface
 public interface KycFetchService {
 
 	Map<String, Object> readFileInObject(String path, String userName, List<String> infoType, String finalStatus)

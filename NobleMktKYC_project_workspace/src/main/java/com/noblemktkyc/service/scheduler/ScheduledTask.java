@@ -29,8 +29,7 @@ public class ScheduledTask {
 
 	// @Scheduled(fixedRate = 18000)
 	public void doTask() throws Exception {
-		Date now = new Date();
-		String strDate = sdfDate.format(now);
+		
 		
 		List<String> emailList = boxApiService.getEmailIdsOfIncompleteKycForms();
 		for (String emailId : emailList) {

@@ -56,9 +56,8 @@ public class CustomValidator implements Validator {
 
 				for (DocumentUploadDetailModel documentUploadDetailModel : user.getDocumentUploadDetail()) {
 
-					if (documentUploadDetailModel != null
-							&& (documentUploadDetailModel.getIdExpiryDate() != null
-									&& !documentUploadDetailModel.getIdExpiryDate().isEmpty())
+					if ((documentUploadDetailModel.getIdExpiryDate() != null
+							&& !documentUploadDetailModel.getIdExpiryDate().isEmpty())
 							&& (documentUploadDetailModel.getIdIssueDate() != null
 									&& !documentUploadDetailModel.getIdIssueDate().isEmpty())) {
 

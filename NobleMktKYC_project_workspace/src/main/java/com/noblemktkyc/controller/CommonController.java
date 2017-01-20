@@ -25,7 +25,7 @@ public class CommonController implements ServletContextAware {
 	private String document_path;
 
 	public CommonController() {
-
+// constructor stub
 	}
 
 	@Override
