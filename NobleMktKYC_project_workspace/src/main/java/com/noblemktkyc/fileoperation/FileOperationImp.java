@@ -73,7 +73,7 @@ public class FileOperationImp implements Serializable, FileOperation {
 			stream = new BufferedOutputStream(fileStream);
 			ObjectMapper mapper = new ObjectMapper();
 			stream.write(mapper.writeValueAsString(modelInfo).getBytes());
-			fileStream.close();
+		
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 			logger.error("Exception in FileOperationImp :: saveKycInfo Method :: exception is", e);
