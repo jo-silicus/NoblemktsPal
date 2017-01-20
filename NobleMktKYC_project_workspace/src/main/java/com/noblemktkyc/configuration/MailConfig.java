@@ -30,7 +30,7 @@ public class MailConfig {
 	private Environment environment;
 	
 	public MailConfig() {
-		
+		// Constructor stub
 	}
 
 	/**

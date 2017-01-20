@@ -30,11 +30,11 @@ public class CORSFilter implements Filter {
 	}
 
 	public void init(FilterConfig filterConfig) {
-
+		//Initialization of filters
 	}
 
 	public void destroy() {
-
+		//freeing the filters
 	}
 
 }
