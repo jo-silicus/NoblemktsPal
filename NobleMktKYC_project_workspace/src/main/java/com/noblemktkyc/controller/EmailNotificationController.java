@@ -23,7 +23,7 @@ import com.noblemktkyc.service.EmailNotification;
  */
 @RestController
 public class EmailNotificationController {
-	final static Logger logger = Logger.getLogger(EmailNotificationController.class);
+	static	final  Logger logger = Logger.getLogger(EmailNotificationController.class);
 
 	@Autowired
 	EmailNotification emailService;

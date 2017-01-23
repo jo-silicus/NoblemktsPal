@@ -38,7 +38,7 @@ public class ITUserControllerTest {
 	private WebApplicationContext wac;
 	private MockMvc mockMvc;
 	
-private ITUserControllerTest() {
+public ITUserControllerTest() {
 		// constructor stub
 	}
 
@@ -49,7 +49,7 @@ private ITUserControllerTest() {
 
 	@Test
 	public void createUserTest() throws Exception {
-	mockMvc.perform(post("/createUser").param("userName", "pallavi").contentType(MediaType.APPLICATION_JSON_VALUE))
+	mockMvc.perform(post("/createUser").param("userName", "test").contentType(MediaType.APPLICATION_JSON_VALUE))
 			.andExpect(status().isOk());
 	}
 	

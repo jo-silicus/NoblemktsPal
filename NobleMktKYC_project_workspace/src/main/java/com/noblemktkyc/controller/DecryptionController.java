@@ -24,7 +24,7 @@ import com.noblemktkyc.service.Decryptor;
  */
 @RestController
 public class DecryptionController {
-	final static Logger logger = Logger.getLogger(DecryptionController.class);
+	static final Logger logger = Logger.getLogger(DecryptionController.class);
 
 	@Autowired
 	private Decryptor decryptorService;
