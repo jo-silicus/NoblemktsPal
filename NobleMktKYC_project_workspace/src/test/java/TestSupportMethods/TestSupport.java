@@ -19,7 +19,7 @@ public class TestSupport {
 	final static Logger logger = Logger.getLogger(TestSupport.class);
 	
 	public User setSessionForMockTest(UserService mockUserService) throws Exception {
-		String userName = "pallavi";
+		String userName = "test";
 		String status = "_inProgress";
 		String directoryPath = "D:/NobleMktKYC/KYCDocuments";
 
