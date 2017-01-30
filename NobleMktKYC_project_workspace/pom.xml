@@ -10,7 +10,7 @@
 		<springframework.version>4.2.0.RELEASE</springframework.version>
 		<jackson.version>2.7.6</jackson.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jenkins.e2eTests.reportsDirectory>target/protractor-reports</jenkins.e2eTests.reportsDirectory>
+    <jenkins.e2eTests.reportsDirectory>target/surefire-reports</jenkins.e2eTests.reportsDirectory>
 </properties>
 
 
